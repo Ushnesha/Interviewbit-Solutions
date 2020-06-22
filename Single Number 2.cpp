@@ -9,7 +9,7 @@ int Solution::singleNumber(const vector<int> &A) {
         aux[31-i]=count%3;
     }
     for(int i=0;i<32;i++){
-        res=res*2+aux[i];
+        res=(res<<1)+aux[i];
     }
     return res;
 }
